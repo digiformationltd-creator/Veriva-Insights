@@ -56,7 +56,7 @@ const pricingHTML = (serviceName) => `
             <a href="#contact" class="btn-primary">Select Enterprise</a>
         </div>
     </div>
-    <p style="text-align: center; margin-top: 30px; color: var(--color-muted);">All projects start with a <strong>FREE sample</strong> — no commitment</p>
+    <div style="text-align: center; margin-top: 30px; color: var(--color-muted);">All projects start with a <strong>FREE sample</strong> — no commitment</div>
 `;
 
 const processHTML = (serviceName) => `
@@ -137,7 +137,9 @@ const routes = {
             </section>
             <!-- Trusted By Strip -->
             <div class="trusted-by">
-                <p>Trusted by UK Businesses Across Multiple Industries</p>
+                <div class="container" style="text-align: center; padding: 0;">
+                    <p style="margin-bottom: 20px; opacity: 0.8;">Trusted by UK Businesses Across Multiple Industries</p>
+                </div>
                 <div class="marquee-container">
                     <div class="marquee-content">
                         <span class="marquee-item">FINTECH SOLUTIONS</span><span class="marquee-item">RETAIL ANALYTICS</span><span class="marquee-item">HEALTH DATA UK</span><span class="marquee-item">LOGISTICS AI</span>
@@ -152,8 +154,8 @@ const routes = {
                     <div class="service-card reveal"><div class="service-icon">🤖</div><h3>ML Models</h3><p>Custom machine learning solutions.</p><a href="#ml-models" class="service-link">Explore →</a></div>
                     <div class="service-card reveal"><div class="service-icon">🖥️</div><h3>BI Dashboards</h3><p>Real-time visibility tools.</p><a href="#bi-dashboards" class="service-link">Explore →</a></div>
                 </div>
+                <div style="text-align:center; padding-top: 40px;"><a href="#contact" class="btn-primary">Request Free Sample Now</a></div>
             </section>
-            <div style="text-align:center; padding: 40px;"><a href="#contact" class="btn-primary">Request Free Sample Now</a></div>
         `
     },
     '/services': {
@@ -242,19 +244,21 @@ const routes = {
     '/data-analytics': {
         title: 'Data Analytics & Reporting | Veriva Insights',
         render: () => `
-            <div class="service-hero reveal">
-                <div class="hero-left">
-                    <h1 style="font-size: 52px;">Data Analytics &<br><span class="glow-text-cyan">Reporting</span></h1>
-                    <p style="font-size: 20px; color: var(--color-muted); margin-top: 20px;">Turn your historical data into a roadmap for future growth. We uncover the "why" behind your numbers.</p>
-                    <div style="margin-top: 40px;"><a href="#contact" class="btn-primary">Request Free Report Sample</a></div>
-                </div>
-                <div class="hero-right">
-                    <div class="glass-panel" style="padding: 40px; text-align: center;">
-                        <div style="font-size: 60px;">📊</div>
-                        <p style="margin-top: 20px; font-weight: 600;">Automated Insights</p>
+            <section class="service-detail-hero">
+                <div class="service-hero reveal">
+                    <div class="hero-left">
+                        <h1 style="font-size: 52px;">Data Analytics &<br><span class="glow-text-cyan">Reporting</span></h1>
+                        <p style="font-size: 20px; color: var(--color-muted); margin-top: 20px;">Turn your historical data into a roadmap for future growth. We uncover the "why" behind your numbers.</p>
+                        <div style="margin-top: 40px;"><a href="#contact" class="btn-primary">Request Free Report Sample</a></div>
+                    </div>
+                    <div class="hero-right">
+                        <div class="glass-panel" style="padding: 40px; text-align: center;">
+                            <div style="font-size: 60px;">📊</div>
+                            <p style="margin-top: 20px; font-weight: 600;">Automated Insights</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <section>
                 <div class="service-content-grid">
                     <div class="reveal">
@@ -301,19 +305,21 @@ const routes = {
     '/ml-models': {
         title: 'ML Model Development | Veriva Insights',
         render: () => `
-            <div class="service-hero reveal">
-                <div class="hero-left">
-                    <h1 style="font-size: 52px;">ML Model<br><span class="glow-text-cyan">Development</span></h1>
-                    <p style="font-size: 20px; color: var(--color-muted); margin-top: 20px;">Automate complex decisions with production-ready machine learning models trained on your proprietary data.</p>
-                    <div style="margin-top: 40px;"><a href="#contact" class="btn-primary">Request Free Model Sample</a></div>
-                </div>
-                <div class="hero-right">
-                    <div class="glass-panel" style="padding: 40px; text-align: center;">
-                        <div style="font-size: 60px;">🤖</div>
-                        <p style="margin-top: 20px; font-weight: 600;">Neural Network Logic</p>
+            <section class="service-detail-hero">
+                <div class="service-hero reveal">
+                    <div class="hero-left">
+                        <h1 style="font-size: 52px;">ML Model<br><span class="glow-text-cyan">Development</span></h1>
+                        <p style="font-size: 20px; color: var(--color-muted); margin-top: 20px;">Automate complex decisions with production-ready machine learning models trained on your proprietary data.</p>
+                        <div style="margin-top: 40px;"><a href="#contact" class="btn-primary">Request Free Model Sample</a></div>
+                    </div>
+                    <div class="hero-right">
+                        <div class="glass-panel" style="padding: 40px; text-align: center;">
+                            <div style="font-size: 60px;">🤖</div>
+                            <p style="margin-top: 20px; font-weight: 600;">Neural Network Logic</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <section>
                 <div class="service-content-grid">
                     <div class="reveal">
@@ -360,19 +366,21 @@ const routes = {
     '/bi-dashboards': {
         title: 'Business Intelligence | Veriva Insights',
         render: () => `
-            <div class="service-hero reveal">
-                <div class="hero-left">
-                    <h1 style="font-size: 52px;">Business<br><span class="glow-text-cyan">Intelligence</span></h1>
-                    <p style="font-size: 20px; color: var(--color-muted); margin-top: 20px;">Real-time dashboards that bring your data to life. Power BI and Tableau solutions for the modern enterprise.</p>
-                    <div style="margin-top: 40px;"><a href="#contact" class="btn-primary">Request Free Dashboard Sample</a></div>
-                </div>
-                <div class="hero-right">
-                    <div class="glass-panel" style="padding: 40px; text-align: center;">
-                        <div style="font-size: 60px;">🖥️</div>
-                        <p style="margin-top: 20px; font-weight: 600;">Real-time KPIs</p>
+            <section class="service-detail-hero">
+                <div class="service-hero reveal">
+                    <div class="hero-left">
+                        <h1 style="font-size: 52px;">Business<br><span class="glow-text-cyan">Intelligence</span></h1>
+                        <p style="font-size: 20px; color: var(--color-muted); margin-top: 20px;">Real-time dashboards that bring your data to life. Power BI and Tableau solutions for the modern enterprise.</p>
+                        <div style="margin-top: 40px;"><a href="#contact" class="btn-primary">Request Free Dashboard Sample</a></div>
+                    </div>
+                    <div class="hero-right">
+                        <div class="glass-panel" style="padding: 40px; text-align: center;">
+                            <div style="font-size: 60px;">🖥️</div>
+                            <p style="margin-top: 20px; font-weight: 600;">Real-time KPIs</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <section>
                 <div class="service-content-grid">
                     <div class="reveal">
@@ -419,19 +427,21 @@ const routes = {
     '/predictive-analytics': {
         title: 'Predictive Analytics | Veriva Insights',
         render: () => `
-            <div class="service-hero reveal">
-                <div class="hero-left">
-                    <h1 style="font-size: 52px;">Predictive<br><span class="glow-text-cyan">Analytics</span></h1>
-                    <p style="font-size: 20px; color: var(--color-muted); margin-top: 20px;">Forecast future trends and simulate outcomes with high-precision statistical modelling.</p>
-                    <div style="margin-top: 40px;"><a href="#contact" class="btn-primary">Request Free Forecast Sample</a></div>
-                </div>
-                <div class="hero-right">
-                    <div class="glass-panel" style="padding: 40px; text-align: center;">
-                        <div style="font-size: 60px;">📈</div>
-                        <p style="margin-top: 20px; font-weight: 600;">Future Projections</p>
+            <section class="service-detail-hero">
+                <div class="service-hero reveal">
+                    <div class="hero-left">
+                        <h1 style="font-size: 52px;">Predictive<br><span class="glow-text-cyan">Analytics</span></h1>
+                        <p style="font-size: 20px; color: var(--color-muted); margin-top: 20px;">Forecast future trends and simulate outcomes with high-precision statistical modelling.</p>
+                        <div style="margin-top: 40px;"><a href="#contact" class="btn-primary">Request Free Forecast Sample</a></div>
+                    </div>
+                    <div class="hero-right">
+                        <div class="glass-panel" style="padding: 40px; text-align: center;">
+                            <div style="font-size: 60px;">📈</div>
+                            <p style="margin-top: 20px; font-weight: 600;">Future Projections</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <section>
                 <div class="service-content-grid">
                     <div class="reveal">
@@ -478,19 +488,21 @@ const routes = {
     '/consulting': {
         title: 'Data Consulting & Strategy | Veriva Insights',
         render: () => `
-            <div class="service-hero reveal">
-                <div class="hero-left">
-                    <h1 style="font-size: 52px;">Data Consulting<br><span class="glow-text-cyan">& Strategy</span></h1>
-                    <p style="font-size: 20px; color: var(--color-muted); margin-top: 20px;">Expert guidance on building a data-driven organisation. Audit, roadmap, and toolstack strategy.</p>
-                    <div style="margin-top: 40px;"><a href="#contact" class="btn-primary">Request Free Strategy Sample</a></div>
-                </div>
-                <div class="hero-right">
-                    <div class="glass-panel" style="padding: 40px; text-align: center;">
-                        <div style="font-size: 60px;">💡</div>
-                        <p style="margin-top: 20px; font-weight: 600;">Strategic Roadmap</p>
+            <section class="service-detail-hero">
+                <div class="service-hero reveal">
+                    <div class="hero-left">
+                        <h1 style="font-size: 52px;">Data Consulting<br><span class="glow-text-cyan">& Strategy</span></h1>
+                        <p style="font-size: 20px; color: var(--color-muted); margin-top: 20px;">Expert guidance on building a data-driven organisation. Audit, roadmap, and toolstack strategy.</p>
+                        <div style="margin-top: 40px;"><a href="#contact" class="btn-primary">Request Free Strategy Sample</a></div>
+                    </div>
+                    <div class="hero-right">
+                        <div class="glass-panel" style="padding: 40px; text-align: center;">
+                            <div style="font-size: 60px;">💡</div>
+                            <p style="margin-top: 20px; font-weight: 600;">Strategic Roadmap</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <section>
                 <div class="service-content-grid">
                     <div class="reveal">
@@ -666,7 +678,7 @@ const routes = {
                     <div class="team-card reveal">
                         <div class="team-avatar">MO</div>
                         <strong>Marcus Okafor</strong>
-                        <p style="font-size: 12px; color: var(--color-muted);">BI & Analytics Lead<br>Power BI / Tableau Certified</p>
+                        <p style="font-size: 12px; color: var(--color-muted);">BI & Analytics Lead<br>Power BI / Tableu Certified</p>
                     </div>
                     <div class="team-card reveal">
                         <div class="team-avatar">RP</div>

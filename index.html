@@ -13,68 +13,59 @@
 
     <!-- SITE HEADER -->
     <header class="site-header">
-        <div class="header-left">
-            <a href="#" class="logo-link">
-                <!-- Premium SVG Logo -->
-                <svg class="logo-svg" viewBox="0 0 300 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Abstract Hexagon Mark -->
-                    <g class="logo-mark">
-                        <!-- Left Hexagon -->
-                        <path d="M42 15L55 22.5V37.5L42 45L29 37.5V22.5L42 15Z" fill="#1E6FFF" fill-opacity="0.8" class="logo-mark-stroke"/>
-                        <!-- Overlapping Cyan Hexagon -->
-                        <path d="M50 15L63 22.5V37.5L50 45L37 37.5V22.5L50 15Z" fill="#00E5FF" fill-opacity="0.6" style="mix-blend-mode: plus-lighter;"/>
-                        <!-- Upward Trend Line -->
-                        <path d="M40 35L45 30L50 33L58 25" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <!-- Subtle Glow -->
-                        <circle cx="46" cy="30" r="15" fill="url(#cyanGlow)" fill-opacity="0.3"/>
-                    </g>
-                    
-                    <!-- Text Mark -->
-                    <g class="logo-text">
-                        <text x="75" y="40" fill="#F0F4FF" font-family="Space Grotesk" font-weight="700" font-size="28" letter-spacing="-0.03em">Veriva</text>
-                        <text x="165" y="40" fill="#1E6FFF" font-family="Space Grotesk" font-weight="500" font-size="26">Insights</text>
-                        <!-- Underline Accent below Insights -->
-                        <rect x="165" y="48" width="100" height="2" fill="#00E5FF"/>
-                    </g>
-
-                    <defs>
-                        <radialGradient id="cyanGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(46 30) rotate(90) scale(15)">
-                            <stop stop-color="#00E5FF"/>
-                            <stop offset="1" stop-color="#00E5FF" stop-opacity="0"/>
-                        </radialGradient>
-                    </defs>
-                </svg>
-            </a>
-        </div>
-
-        <!-- Desktop Navigation -->
-        <nav class="desktop-nav">
-            <a href="#" class="nav-link active">Home</a>
-            <div class="nav-item-dropdown">
-                <a href="#services" class="nav-link dropdown-toggle">Services</a>
-                <div class="dropdown-menu">
-                    <a href="#data-analytics" class="dropdown-link">Data Analytics & Reporting</a>
-                    <a href="#ml-models" class="dropdown-link">ML Model Development</a>
-                    <a href="#bi-dashboards" class="dropdown-link">Business Intelligence Dashboards</a>
-                    <a href="#predictive-analytics" class="dropdown-link">Predictive Analytics</a>
-                    <a href="#consulting" class="dropdown-link">Data Consulting & Strategy</a>
-                </div>
+        <div class="header-container container">
+            <div class="header-left">
+                <a href="#" class="logo-link">
+                    <!-- Premium SVG Logo - Fixed Alignment -->
+                    <svg class="logo-svg" viewBox="29 0 271 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g class="logo-mark">
+                            <path d="M42 15L55 22.5V37.5L42 45L29 37.5V22.5L42 15Z" fill="#1E6FFF" fill-opacity="0.8" class="logo-mark-stroke"/>
+                            <path d="M50 15L63 22.5V37.5L50 45L37 37.5V22.5L50 15Z" fill="#00E5FF" fill-opacity="0.6" style="mix-blend-mode: plus-lighter;"/>
+                            <path d="M40 35L45 30L50 33L58 25" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="46" cy="30" r="15" fill="url(#cyanGlow)" fill-opacity="0.3"/>
+                        </g>
+                        <g class="logo-text">
+                            <text x="75" y="40" fill="#F0F4FF" font-family="Space Grotesk" font-weight="700" font-size="28" letter-spacing="-0.03em">Veriva</text>
+                            <text x="165" y="40" fill="#1E6FFF" font-family="Space Grotesk" font-weight="500" font-size="26">Insights</text>
+                            <rect x="165" y="48" width="100" height="2" fill="#00E5FF"/>
+                        </g>
+                        <defs>
+                            <radialGradient id="cyanGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(46 30) rotate(90) scale(15)">
+                                <stop stop-color="#00E5FF"/>
+                                <stop offset="1" stop-color="#00E5FF" stop-opacity="0"/>
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                </a>
             </div>
-            <a href="#samples" class="nav-link">Samples</a>
-            <a href="#about" class="nav-link">About</a>
-            <a href="#contact" class="nav-link">Contact</a>
-        </nav>
 
-        <div class="header-cta">
-            <a href="#samples" class="btn-primary">Get Free Sample</a>
+            <nav class="desktop-nav">
+                <a href="#" class="nav-link active">Home</a>
+                <div class="nav-item-dropdown">
+                    <a href="#services" class="nav-link dropdown-toggle">Services</a>
+                    <div class="dropdown-menu">
+                        <a href="#data-analytics" class="dropdown-link">Data Analytics & Reporting</a>
+                        <a href="#ml-models" class="dropdown-link">ML Model Development</a>
+                        <a href="#bi-dashboards" class="dropdown-link">Business Intelligence Dashboards</a>
+                        <a href="#predictive-analytics" class="dropdown-link">Predictive Analytics</a>
+                        <a href="#consulting" class="dropdown-link">Data Consulting & Strategy</a>
+                    </div>
+                </div>
+                <a href="#samples" class="nav-link">Samples</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-cta">
+                <a href="#samples" class="btn-primary">Get Free Sample</a>
+            </div>
+
+            <button id="hamburger" class="hamburger" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-
-        <!-- Mobile Hamburger -->
-        <button id="hamburger" class="hamburger" aria-label="Open menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
     </header>
 
     <!-- MOBILE MENU OVERLAY -->
@@ -97,69 +88,69 @@
 
     <!-- SITE FOOTER -->
     <footer class="site-footer">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <div style="height: 40px; margin-bottom: 20px;">
-                     <!-- Footer Logo (White version) -->
-                     <svg height="35" viewBox="0 0 300 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <text x="0" y="40" fill="#F0F4FF" font-family="Space Grotesk" font-weight="700" font-size="28" letter-spacing="-0.03em">Veriva</text>
-                        <text x="90" y="40" fill="#F0F4FF" font-family="Space Grotesk" font-weight="500" font-size="26" opacity="0.8">Insights</text>
-                    </svg>
-                </div>
-                <p class="footer-tagline">Turn Your Data Into Decisions That Matter. Professional AI & Data Analytics.</p>
-                <div class="footer-social" style="display: flex; gap: 15px;">
-                    <!-- Social icons placeholder -->
-                    <span style="color: var(--color-accent);">Linkedln</span>
-                    <span style="color: var(--color-accent);">Twitter</span>
-                </div>
-            </div>
-            
-            <div class="footer-col">
-                <h4>Services</h4>
-                <ul class="footer-links">
-                    <li><a href="#data-analytics">Data Analytics</a></li>
-                    <li><a href="#ml-models">ML Engineering</a></li>
-                    <li><a href="#bi-dashboards">BI Dashboards</a></li>
-                    <li><a href="#predictive-analytics">Predictive Analytics</a></li>
-                    <li><a href="#consulting">Data Strategy</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul class="footer-links">
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#samples">Samples</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4>Contact Info</h4>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span>📧</span>
-                        <a href="mailto:ukverinsights@163.com" style="color: inherit; text-decoration: none;">ukverinsights@163.com</a>
+        <div class="footer-container container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div style="height: 40px; margin-bottom: 20px;">
+                        <svg height="35" viewBox="0 0 300 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <text x="0" y="40" fill="#F0F4FF" font-family="Space Grotesk" font-weight="700" font-size="28" letter-spacing="-0.03em">Veriva</text>
+                            <text x="90" y="40" fill="#F0F4FF" font-family="Space Grotesk" font-weight="500" font-size="26" opacity="0.8">Insights</text>
+                        </svg>
                     </div>
-                    <div class="contact-item">
-                        <span>📞</span>
-                        <span>+86 173 3209 1446</span>
-                    </div>
-                    <div class="contact-item">
-                        <span>📍</span>
-                        <span>[UK Address — To be added]</span>
+                    <p class="footer-tagline">Turn Your Data Into Decisions That Matter. Professional AI & Data Analytics.</p>
+                    <div class="footer-social" style="display: flex; gap: 15px;">
+                        <span style="color: var(--color-accent);">Linkedln</span>
+                        <span style="color: var(--color-accent);">Twitter</span>
                     </div>
                 </div>
-            </div>
-        </div>
+                
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#data-analytics">Data Analytics</a></li>
+                        <li><a href="#ml-models">ML Engineering</a></li>
+                        <li><a href="#bi-dashboards">BI Dashboards</a></li>
+                        <li><a href="#predictive-analytics">Predictive Analytics</a></li>
+                        <li><a href="#consulting">Data Strategy</a></li>
+                    </ul>
+                </div>
 
-        <div class="bottom-bar">
-            <p>&copy; 2026 Veriva Insights Ltd. All rights reserved.</p>
-            <div class="bottom-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Cookie Policy</a>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#samples">Samples</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span>📧</span>
+                            <a href="mailto:ukverinsights@163.com" style="color: inherit; text-decoration: none;">ukverinsights@163.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span>📞</span>
+                            <span>+86 173 3209 1446</span>
+                        </div>
+                        <div class="contact-item">
+                            <span>📍</span>
+                            <span>[UK Address — To be added]</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-bar">
+                <p>&copy; 2026 Veriva Insights Ltd. All rights reserved.</p>
+                <div class="bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
             </div>
         </div>
     </footer>
